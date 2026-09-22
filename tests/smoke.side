@@ -1,0 +1,534 @@
+{
+  "id": "a7acb7cb-b655-47e7-927c-7795dad40e51",
+  "version": "2.0",
+  "name": "Smoke Test",
+  "url": "http://127.0.0.1:5500/teton/1.6/index.html",
+  "tests": [
+    {
+      "id": "a50c512f-b2fe-4e06-ae08-11b64dcc3303",
+      "name": "Smoke test",
+      "commands": [
+        {
+          "id": "5fa11f23-7b45-45de-babd-3118df918e03",
+          "comment": "",
+          "command": "open",
+          "target": "http://127.0.0.1:5500/teton/1.6/index.html",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e1ccb2c6-79f7-4de6-abbc-8c3c09be7734",
+          "comment": "",
+          "command": "setWindowSize",
+          "target": "1936x1048",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1d0b39bf-6b3a-44cb-8ad6-483c4af97611",
+          "comment": "",
+          "command": "verifyElementPresent",
+          "target": "css=.header-logo img",
+          "targets": [
+            [
+              "css=.header-logo img",
+              "css:finder"
+            ],
+            [
+              "xpath=//img[@alt='Teton Chamber of Commerce Logo']",
+              "xpath:img"
+            ],
+            [
+              "xpath=//div[@id='content']/header/div/div/a/img",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//img",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "49ad9ea4-755c-40ea-b360-e1dbd6bb1168",
+          "comment": "",
+          "command": "verifyText",
+          "target": "css=.header-title > h2",
+          "targets": [
+            [
+              "css=.header-title > h2",
+              "css:finder"
+            ],
+            [
+              "xpath=//div[@id='content']/header/div/div[2]/h2",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//h2",
+              "xpath:position"
+            ],
+            [
+              "xpath=//h2[contains(.,'Chamber of Commerce')]",
+              "xpath:innerText"
+            ]
+          ],
+          "value": "Chamber of Commerce"
+        },
+        {
+          "id": "a3eb0738-4c9a-4c3b-9c9f-9392a7093869",
+          "comment": "",
+          "command": "verifyText",
+          "target": "css=.header-title > h1",
+          "targets": [
+            [
+              "css=.header-title > h1",
+              "css:finder"
+            ],
+            [
+              "xpath=//div[@id='content']/header/div/div[2]/h1",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//h1",
+              "xpath:position"
+            ],
+            [
+              "xpath=//h1[contains(.,'Teton Idaho')]",
+              "xpath:innerText"
+            ]
+          ],
+          "value": "Teton Idaho"
+        },
+        {
+          "id": "4e6be113-6a44-4c34-b604-b701397b0c00",
+          "comment": "",
+          "command": "verifyTitle",
+          "target": "Teton Idaho CoC",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "07962f66-dd1b-4e7c-a531-72c403585bac",
+      "name": "Home Page Features",
+      "commands": [
+        {
+          "id": "a1388318-cf92-45f2-b8ef-fe3c9c503f30",
+          "comment": "",
+          "command": "open",
+          "target": "http://127.0.0.1:5500/teton/1.6/index.html",
+          "targets": [
+            [
+              "http://127.0.0.1:5500/teton/1.6/index.html",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "ccfac798-cdc5-4076-a437-fe45edbabe4e",
+          "comment": "",
+          "command": "setWindowSize",
+          "target": "1936x1048",
+          "targets": [
+            [
+              "1936x1048",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "ca62cf52-ea83-4593-a4b4-3f301ef6bd0a",
+          "comment": "Nav menu with full list of links is visible at this window size",
+          "command": "verifyElementPresent",
+          "target": "css=nav ul",
+          "targets": [
+            [
+              "css=nav ul",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "7f84cc8a-d68c-4f31-bbfd-d29f0dac6e49",
+          "comment": "Wait for spotlight business data to load via fetch",
+          "command": "waitForElementPresent",
+          "target": "css=.main-spotlight > div",
+          "targets": [
+            [
+              "css=.main-spotlight > div",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "7210eb0f-b615-46e1-9fcc-9b46c143ce8b",
+          "comment": "Two spotlights should be present",
+          "command": "verifyElementCount",
+          "target": "css=.main-spotlight > div",
+          "targets": [
+            [
+              "css=.main-spotlight > div",
+              "css:finder"
+            ]
+          ],
+          "value": "2"
+        },
+        {
+          "id": "7ccc164a-b76c-4c43-b1f2-b251ee15086a",
+          "comment": "Join Us link in the hero section",
+          "command": "verifyElementPresent",
+          "target": "css=.main-hero .a-button",
+          "targets": [
+            [
+              "css=.main-hero .a-button",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "f880a02b-75ca-45d5-8190-34ad90ae96e0",
+          "comment": "",
+          "command": "click",
+          "target": "css=.main-hero .a-button",
+          "targets": [
+            [
+              "css=.main-hero .a-button",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "34d45027-5666-4a3a-aba3-b39d00795407",
+          "comment": "Clicking Join Us should land on the join wizard",
+          "command": "verifyText",
+          "target": "css=.join-wizard-main h3",
+          "targets": [
+            [
+              "css=.join-wizard-main h3",
+              "css:finder"
+            ]
+          ],
+          "value": "Welcome to the Teton Chamber of Commerce Signup Wizard!"
+        }
+      ]
+    },
+    {
+      "id": "2a8af1ea-4b9a-4272-b2b8-e03fa9d0de2d",
+      "name": "Directory Page",
+      "commands": [
+        {
+          "id": "f69add34-3874-4e87-bc5c-d54f3657a66d",
+          "comment": "",
+          "command": "open",
+          "target": "http://127.0.0.1:5500/teton/1.6/directory.html",
+          "targets": [
+            [
+              "http://127.0.0.1:5500/teton/1.6/directory.html",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "6c2c36fb-35b5-4404-868c-7b87bc886818",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "id=directory-grid",
+          "targets": [
+            [
+              "id=directory-grid",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "fcfae778-9bce-47e4-8322-8810edd02206",
+          "comment": "Display card (grid) view",
+          "command": "click",
+          "target": "id=directory-grid",
+          "targets": [
+            [
+              "id=directory-grid",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "b9cec0d9-3811-4fa1-a006-004500ee081d",
+          "comment": "Wait for business data to load via fetch",
+          "command": "waitForElementPresent",
+          "target": "css=#directory-data section",
+          "targets": [
+            [
+              "css=#directory-data section",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "d0704648-8a25-4542-8b02-70974f451fb9",
+          "comment": "Teton Turf and Tree business shown in card/grid view",
+          "command": "verifyElementPresent",
+          "target": "xpath=//div[@id='directory-data']//p[contains(text(),'Teton Turf and Tree')]",
+          "targets": [
+            [
+              "xpath=//div[@id='directory-data']//p[contains(text(),'Teton Turf and Tree')]",
+              "xpath:innerText"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "03ab556f-75e7-49a8-9769-b0890816e286",
+          "comment": "Display list view",
+          "command": "click",
+          "target": "id=directory-list",
+          "targets": [
+            [
+              "id=directory-list",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "e491f811-0e62-451a-838b-7d6d3ac91325",
+          "comment": "Teton Turf and Tree business shown in list view",
+          "command": "verifyElementPresent",
+          "target": "xpath=//div[@id='directory-data']//p[contains(text(),'Teton Turf and Tree')]",
+          "targets": [
+            [
+              "xpath=//div[@id='directory-data']//p[contains(text(),'Teton Turf and Tree')]",
+              "xpath:innerText"
+            ]
+          ],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "0377aea4-f4d7-403a-be8f-59202bdef59d",
+      "name": "Join Page",
+      "commands": [
+        {
+          "id": "54c15d48-9214-4fe9-9a9c-ced9cf7238ce",
+          "comment": "",
+          "command": "open",
+          "target": "http://127.0.0.1:5500/teton/1.6/join.html",
+          "targets": [
+            [
+              "http://127.0.0.1:5500/teton/1.6/join.html",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "c0549ee2-8ef6-4bc4-b7fa-a50cbe433c27",
+          "comment": "First Name input box is present",
+          "command": "verifyElementPresent",
+          "target": "css=input[name=fname]",
+          "targets": [
+            [
+              "css=input[name=fname]",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "ddaf77e3-7c45-4bab-977f-138eb8360b00",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name=fname]",
+          "targets": [
+            [
+              "css=input[name=fname]",
+              "css:finder"
+            ]
+          ],
+          "value": "Juan"
+        },
+        {
+          "id": "e4188418-cba3-4bc0-a84f-83d06878f8f1",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name=lname]",
+          "targets": [
+            [
+              "css=input[name=lname]",
+              "css:finder"
+            ]
+          ],
+          "value": "Reyes"
+        },
+        {
+          "id": "359e8cc3-73eb-4ea1-9a8e-8ff0c6c956ef",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name=bizname]",
+          "targets": [
+            [
+              "css=input[name=bizname]",
+              "css:finder"
+            ]
+          ],
+          "value": "Test Business"
+        },
+        {
+          "id": "af23d779-9ae7-43e5-a25c-df1e7e7702ba",
+          "comment": "",
+          "command": "type",
+          "target": "css=input[name=biztitle]",
+          "targets": [
+            [
+              "css=input[name=biztitle]",
+              "css:finder"
+            ]
+          ],
+          "value": "Owner"
+        },
+        {
+          "id": "1fe16bfa-d33a-4e48-9738-dd1a2b24ef43",
+          "comment": "",
+          "command": "click",
+          "target": "css=input[value='Next Step']",
+          "targets": [
+            [
+              "css=input[value='Next Step']",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "a65104e6-ae20-4487-abbb-b2873e70b3db",
+          "comment": "Email input box is present on step 2",
+          "command": "verifyElementPresent",
+          "target": "css=input[name=email]",
+          "targets": [
+            [
+              "css=input[name=email]",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "1fe71f81-b03c-4f19-a946-bed37a639144",
+      "name": "Admin Login",
+      "commands": [
+        {
+          "id": "973f4f6d-c0bd-45a4-a1a5-402419ce5270",
+          "comment": "",
+          "command": "open",
+          "target": "http://127.0.0.1:5500/teton/1.6/admin.html",
+          "targets": [
+            [
+              "http://127.0.0.1:5500/teton/1.6/admin.html",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "af14dafb-9953-4c2c-b104-7f35893165ce",
+          "comment": "Username input box is present",
+          "command": "verifyElementPresent",
+          "target": "id=username",
+          "targets": [
+            [
+              "id=username",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "1f1e4704-b33f-478f-817a-de0eceb91c8e",
+          "comment": "",
+          "command": "type",
+          "target": "id=username",
+          "targets": [
+            [
+              "id=username",
+              "css:finder"
+            ]
+          ],
+          "value": "baduser"
+        },
+        {
+          "id": "a3da8005-488d-4517-a0eb-0bbe4bb464b2",
+          "comment": "",
+          "command": "type",
+          "target": "id=password",
+          "targets": [
+            [
+              "id=password",
+              "css:finder"
+            ]
+          ],
+          "value": "badpassword"
+        },
+        {
+          "id": "e9fd8ef1-138f-4973-8155-4c9af5919bd6",
+          "comment": "",
+          "command": "click",
+          "target": "css=.login input.mysubmit",
+          "targets": [
+            [
+              "css=.login input.mysubmit",
+              "css:finder"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "b14970c1-5c0c-4fb4-98b7-4c5900aa7a30",
+          "comment": "Appropriate error message is displayed for bad credentials",
+          "command": "verifyText",
+          "target": "css=.errorMessage",
+          "targets": [
+            [
+              "css=.errorMessage",
+              "css:finder"
+            ]
+          ],
+          "value": "Invalid username and password."
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "669032c5-58a6-488e-99f1-e7712e238055",
+      "name": "Default Suite",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 300,
+      "tests": [
+        "a50c512f-b2fe-4e06-ae08-11b64dcc3303",
+        "07962f66-dd1b-4e7c-a531-72c403585bac",
+        "2a8af1ea-4b9a-4272-b2b8-e03fa9d0de2d",
+        "0377aea4-f4d7-403a-be8f-59202bdef59d",
+        "1fe71f81-b03c-4f19-a946-bed37a639144"
+      ]
+    }
+  ],
+  "urls": [
+    "http://127.0.0.1:5500/teton/1.6/index.html"
+  ],
+  "plugins": []
+}
